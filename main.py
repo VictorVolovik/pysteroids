@@ -52,7 +52,7 @@ def main():
                 asteroid_got_shot = asteroid.detectCollision(shot)
 
                 if asteroid_got_shot:
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
         for sprite in drawable:
