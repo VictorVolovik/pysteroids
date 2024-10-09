@@ -1,11 +1,13 @@
 # Pysteroids
 
+Project built foloowing Boot.Dev's [Build Asteroids guided project](https://www.boot.dev/courses/build-asteroids)
+
 ## Setup
 
-### Create virtual environment
+### Activate virtual environment
 
 ```
-python3 -m venv venv
+source venv/bin/activate
 ```
 
 ### Install dependencies
