@@ -1,3 +1,4 @@
+import sys
 import pygame
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from player import Player
@@ -20,7 +21,7 @@ def main():
     asteroids = pygame.sprite.Group()
 
     Player.containers = (updatable, drawable)
-    Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = updatable
@@ -36,6 +37,13 @@ def main():
 
         for sprite in updatable:
             sprite.update(dt)
+
+        for asteroid in asteroids:
+            collided = asteroid.detectCollision(player)
+
+            if collided:
+                print("Game over!")
+                sys.exit()
 
         for sprite in drawable:
             sprite.draw(screen)
