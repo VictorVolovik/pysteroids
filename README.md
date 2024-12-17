@@ -1,6 +1,6 @@
 # Pysteroids
 
-Project built foloowing Boot.Dev's [Build Asteroids guided project](https://www.boot.dev/courses/build-asteroids)
+Project built following Boot.Dev's [Build Asteroids guided project](https://www.boot.dev/courses/build-asteroids)
 
 ## Setup
 
